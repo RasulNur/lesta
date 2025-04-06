@@ -1,0 +1,36 @@
+@use "tailwindcss";
+@use "./vars.scss" as *;
+
+html,
+body {
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-primary);
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 400;
+    background: url(/images/bg.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+button,
+a {
+    &,
+    svg,
+    span {
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+}
+
+img,
+button,
+svg,
+::placeholder {
+    user-select: none;
+}

@@ -1,0 +1,137 @@
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@theme {
+    --color-black: #000;
+
+    --color-white: #fff;
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-70: rgba(255, 255, 255, 0.7);
+
+    --color-primary: #fff;
+
+    --color-secondary: #80848c;
+    --color-secondary2: #b2b5ba;
+
+    --color-gray: #f5f5f8;
+
+    --color-main: rgb(1, 10, 25);
+    --color-main-80: rgba(1, 10, 25, 0.8);
+
+    --leading-100: 100%;
+    --leading-110: 110%;
+    --leading-120: 120%;
+    --leading-125: 125%;
+    --leading-130: 130%;
+    --leading-140: 140%;
+    --leading-150: 150%;
+    --leading-160: 160%;
+    --leading-170: 170%;
+    --leading-180: 180%;
+    --leading-190: 190%;
+    --leading-200: 200%;
+
+    --radius-btn: 0.125rem;
+}
+
+:root {
+    --btn-height: 2.875rem;
+}
+
+@utility flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@utility transition-300 {
+    transition: all 0.3s ease;
+}
+@utility absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+@utility absolute-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@utility absolute-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@utility bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@utility custom-btn {
+    @apply flex-center;
+    gap: 0.5rem;
+    height: var(--btn-height);
+    width: fit-content;
+    font-size: 1rem;
+    border-radius: var(--radius-btn);
+    padding: 0.5rem 1rem;
+    color: var(--btn-text-color);
+    background: var(--btn-bg-color);
+    border: 0.125rem solid var(--btn-border-color);
+}
+
+@utility disabled-btn {
+    --btn-bg-color: var(--color-gray) !important;
+    --btn-text-color: var(--color-secondary) !important;
+    --btn-border-color: var(--color-gray) !important;
+    pointer-events: none;
+}
+
+@utility white-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-main);
+    --btn-bg-color: var(--color-white);
+    --btn-border-color: var(--color-white);
+}
+.white-btn {
+    &:hover {
+        --btn-bg-color: var(--color-main);
+        --btn-text-color: var(--color-white);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+@utility main-btn {
+    @apply custom-btn;
+    --btn-text-color: var(--color-main);
+    --btn-bg-color: transparent;
+    --btn-border-color: var(--color-main);
+}
+.main-btn {
+    &:hover {
+        --btn-bg-color: var(--color-main);
+        --btn-text-color: var(--color-white);
+    }
+    &:disabled {
+        @apply disabled-btn;
+    }
+}
+
+@mixin minMaxSize($size) {
+    min-height: $size;
+    max-height: $size;
+    min-width: $size;
+    max-width: $size;
+}
+@mixin minMaxHeight($size) {
+    min-height: $size;
+    max-height: $size;
+}
+@mixin minMaxWidth($size) {
+    min-width: $size;
+    max-width: $size;
+}
