@@ -7,8 +7,8 @@ import { notFound } from "next/navigation";
 import ProgressBar from "@/components/ui/ProgressBar";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
-import ScrollUp from "@/components/layout/ScrollUp";
 import { IRootLayoutProps } from "@/types/props/layout.types";
+import ScrollUp from "@/components/ui/ScrollUp";
 
 const roboto = Roboto({
     subsets: ["latin"],

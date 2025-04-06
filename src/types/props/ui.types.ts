@@ -8,42 +8,7 @@ export interface IIconProps extends Omit<SVGProps<SVGSVGElement>, "name" | "type
     className?: string;
 }
 
-export type SpritesName =
-    | "arrow"
-    | "chevron"
-    | "chevron-double"
-    | "eye"
-    | "eye-off"
-    | "filter"
-    | "phone"
-    | "search"
-    | "compare"
-    | "cart"
-    | "time"
-    | "cart-check"
-    | "heart"
-    | "exit"
-    | "location"
-    | "user"
-    | "plus"
-    | "minus"
-    | "email"
-    | "menu"
-    | "x"
-    | "pause"
-    | "check"
-    | "play"
-    | "drill"
-    | "medal"
-    | "delivery"
-    | "telegram"
-    | "facebook"
-    | "youtube"
-    | "instagram"
-    | "column"
-    | "row"
-    | "trash"
-    | "service";
+export type SpritesName = "chevron" | "chevron-double" | "search" | "x";
 
 export interface INextImageProps extends ImageProps {
     src: string;
